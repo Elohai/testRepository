@@ -3,6 +3,6 @@
 class Figure{
 	public:
 		Figure(){};
-		virtual float area() const{};	
+		virtual float area() const=0;	
 };
 #endif
