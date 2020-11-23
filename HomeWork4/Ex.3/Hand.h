@@ -10,5 +10,5 @@ public:
 	void Add(Card* newCard);
 	void Clear();
 	int GetValue();
-
+	void Print();
 };

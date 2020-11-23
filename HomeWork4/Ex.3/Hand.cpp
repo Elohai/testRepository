@@ -7,19 +7,21 @@ void Hand::Add(Card* newCard){
 void Hand::Clear(){
 		hand.clear();
 }	
+
+bool ComparePointers(Card* a,Card* b){
+	return *a<*b;
+}
+
 int Hand::GetValue(){
 	int result=0;
 	int acesCount = 0;
+	Print();
+	std::sort(hand.begin(),hand.end(),ComparePointers);
 	std::vector<Card*>::iterator cardIterator;
-//	for(cardIterator = hand.begin();cardIterator!=hand.end();cardIterator++){
-//		result+= cardIterator->GetValue();
-//		if (cardIterator->GetCardValueName() == "Ace"){
-//			acesCount++;
-//		}
-//	}
-	for(int i=0;i<hand.size();i++){
-		result+= hand[i]->GetValue();
-		if(hand[i]->GetValue() ==11){
+	Print();
+	for(cardIterator = hand.begin();cardIterator!=hand.end();cardIterator++){
+		result+= (*cardIterator)->GetValue();
+		if ((*cardIterator)->GetCardValueName() == "Ace"){
 			acesCount++;
 		}
 	}
@@ -31,3 +33,7 @@ int Hand::GetValue(){
 	return result;
 }
 
+void Hand::Print(){
+	for_each(hand.begin(),hand.end(),std::mem_fun(&Card::GetCardInfo));
+
+}
