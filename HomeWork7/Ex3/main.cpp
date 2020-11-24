@@ -1,12 +1,6 @@
 #include "GenericPlayer.h"
 #include "Game.h"
 
-//глобальная переменная для работы как в теле main, так и в теле функции 
-
-void TheGame(){
-    
-}
-
 int main(){
     std::vector<std::string> playersNames; 
     Game mainGame = Game(playersNames);
