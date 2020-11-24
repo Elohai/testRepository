@@ -1,7 +1,8 @@
 #include "Player.h"
 
 bool Player::IsHitting()const{
-	std::cout<<"One more card?(y/n)"<<std::endl;
+	PrintHand();
+    std::cout<<"One more card?(y/n):";
 	std::string answer;
 	std::cin>>answer;
 	if(answer=="y"){

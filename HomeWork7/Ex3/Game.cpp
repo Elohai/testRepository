@@ -33,7 +33,8 @@ void Game::Play()
         }
         m_Deck.Deal(m_House);        
     }   
-    m_House.FlipFirstCard();   
+    m_House.FlipFirstCard(); 
+    std::cout<<std::endl;
     for (pPlayer = m_Players.begin(); pPlayer != m_Players.end(); ++pPlayer)
     {
         (*pPlayer).PrintHand();
@@ -60,7 +61,7 @@ void Game::Play()
     }
     else
     {  
-        std::cout<<m_House<<" has "<<m_House.GetTotal()<<std::endl<<std::endl;;
+        std::cout<<m_House<<" has "<<m_House.GetTotal()<<std::endl;
         for (pPlayer = m_Players.begin(); pPlayer != m_Players.end();
              ++pPlayer)
         {

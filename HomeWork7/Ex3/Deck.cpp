@@ -30,7 +30,7 @@ void Deck::AdditionalCards(GenericPlayer& aGenericPlayer)
     while (!(aGenericPlayer.IsBusted()) && aGenericPlayer.IsHitting())
     {
         Deal(aGenericPlayer);
-        std::cout << aGenericPlayer <<" takes one more card"<< std::endl;
+        std::cout << aGenericPlayer <<" takes one more card"<< std::endl<<std::endl;
         aGenericPlayer.PrintHand();
         std::cout<<std::endl;
         
