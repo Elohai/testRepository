@@ -1,5 +1,9 @@
 #include "Hand.h"
 
+Hand::~Hand(){
+    
+    Clear();
+}
 
 void Hand::Add(Card* newCard){
 		hand.push_back(newCard);

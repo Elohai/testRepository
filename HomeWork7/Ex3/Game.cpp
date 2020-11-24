@@ -2,21 +2,25 @@
 
 Game::Game(const std::vector<std::string>& names)
 {
-    // создает вектор игроков из вектора с именами
-    std::vector<std::string>::const_iterator pName;
-    for (pName = names.begin(); pName != names.end(); ++pName)
-    {
-        m_Players.push_back(Player(*pName));
-    }
-    
-    // запускает генератор случайных чисел
+    GeneratePlayers(names);
     srand(static_cast<unsigned int>(time(0)));
     m_Deck.Populate(1);
     m_Deck.Shuffle();
 }
 
+
+
 Game::~Game()
 {}
+
+void Game::GeneratePlayers(const std::vector<std::string>& names){
+    m_Players.clear(); //очистка перед наполнением на случай повторной игры
+    std::vector<std::string>::const_iterator pName;
+    for (pName = names.begin(); pName != names.end(); ++pName)
+    {
+        m_Players.push_back(Player(*pName));
+    }    
+}
 
 void Game::Play()
 {    
@@ -55,7 +59,8 @@ void Game::Play()
         }
     }
     else
-    {    
+    {  
+        std::cout<<m_House<<" has "<<m_House.GetTotal()<<std::endl<<std::endl;;
         for (pPlayer = m_Players.begin(); pPlayer != m_Players.end();
              ++pPlayer)
         {

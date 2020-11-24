@@ -16,14 +16,14 @@ bool Player::IsHitting()const{
 	}
 }
 void Player::Win()const{
-	std::cout<<"Player "<<m_name<<" wins!"<<std::endl;
+	std::cout<<"Player "<<m_name<<" wins with "<<GetTotal()<<std::endl;
 
 }
 void Player::Lose()const{
-	std::cout<<"Player "<<m_name<<" loses!"<<std::endl;
+	std::cout<<"Player "<<m_name<<" loses with "<<GetTotal()<<std::endl;
 }
 void Player::Push()const{
-	std::cout<<"Draw for "<<m_name<<"!"<<std::endl;
+	std::cout<<"Draw for "<<m_name<<" with "<<GetTotal()<<std::endl;
 }
 
 void Player::PrintHand()const{
@@ -31,5 +31,5 @@ void Player::PrintHand()const{
     for(std::vector<Card*>::const_iterator iterator = hand.begin();iterator!=hand.end();iterator++){
         std::cout<<**iterator;
     }
-    std::cout<<"Score is "<<GetTotal()<<std::endl;
+    std::cout<<"Score is "<<GetTotal()<<std::endl<<std::endl;
 }

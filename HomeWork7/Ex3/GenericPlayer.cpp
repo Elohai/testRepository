@@ -5,7 +5,7 @@ bool GenericPlayer::IsBusted(){
 }
 
 void GenericPlayer::Bust(){
-	std::cout<<m_name<<" is boosted!"<<std::endl;
+	std::cout<<m_name<<" is boosted!"<<std::endl<<std::endl;
 }
 
 std::ostream& operator<<(std::ostream &out,const GenericPlayer &player){

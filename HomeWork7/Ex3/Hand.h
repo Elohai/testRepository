@@ -10,4 +10,5 @@ public:
 	void Add(Card* newCard);
 	void Clear();
 	int GetTotal()const;
+    virtual ~Hand();
 };
