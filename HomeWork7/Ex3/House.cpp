@@ -12,4 +12,5 @@ void House::PrintHand()const{
         if((*iterator)->IsFlipped())
             std::cout<<**iterator;
     }
+    std::cout<<std::endl<<std::endl;
 }

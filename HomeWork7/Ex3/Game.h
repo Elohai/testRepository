@@ -8,10 +8,8 @@ public:
     Game(const std::vector<std::string>& names);
     
     ~Game();
-    
-    // проводит игру в Blackjack
     void Play();
-    
+    void GeneratePlayers(const std::vector<std::string> &names); //метод для замены игроков в случае повторной игры без перезамеса колоды
 private:
     Deck m_Deck;
     House m_House;
